@@ -54,11 +54,31 @@ vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
       no_ignore = false,
-      hidden = true
+      hidden = true,
+      -- Exclude .git and node_modules folders
+      -- It accepts list of patterns (string) or regexes (Lua regex)
+      find_command = {
+        "fd",
+        "--type=file",
+        "--exclude",
+        ".git",
+        "--exclude",
+        "node_modules"
+      }
     })
   end)
 vim.keymap.set('n', ';r', function()
-  builtin.live_grep()
+  builtin.live_grep({
+    prompt_title = "Live Grep",
+    -- Exclude .git and node_modules folders
+    -- It accepts list of patterns (string) or regexes (Lua regex)
+    grep_open_files = {
+      "!.git/*",
+      "!.git",
+      "!node_modules/*",
+      "!node_modules"
+    }
+  })
 end)
 vim.keymap.set('n', '\\\\', function()
   builtin.buffers()

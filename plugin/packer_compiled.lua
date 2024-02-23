@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/davek/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/Users/davek/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/davek/.local/share/nvim/site/pack/packer/start/git.nvim",
