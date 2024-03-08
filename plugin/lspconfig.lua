@@ -121,6 +121,7 @@ nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 
+
 nvim_lsp.jsonls.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -130,6 +131,7 @@ nvim_lsp.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
+
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
